@@ -89,8 +89,8 @@ export default class LinearGradient extends Component {
         <NativeLinearGradient
           style={{position: 'absolute', top: 0, left: 0, bottom: 0, right: 0}}
           colors={colors.map(processColor)}
-          start={start}
-          end={end}
+          start={start?[start.x,start.y]:undefined}
+          end={end?[end.x,end.y]:undefined}
           locations={locations ? locations.slice(0, colors.length) : null}
           borderRadii={borderRadiiPerCorner}
         />
